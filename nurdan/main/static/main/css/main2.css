@@ -33,7 +33,7 @@ aside ul li {
 }
 
 aside ul li:hover, aside ul a:hover {
-    color: red;
+    color: orange;
     text-decoration: none;
     transform: scale(1.05);
 }
@@ -47,14 +47,14 @@ main .features {
 }
 
 main .features h1 {font-size: 50px;}
-main .features p {max-width: 400px; margin: 20px auto}
+main .features p {max-width: 800px; margin: 20px auto}
 
 
-.alert-warning {
+.alert-dark {
     float: left;
     clear: both;
-    width: 400px;
-    margin: 15px 34%;
+    width: 800px;
+    margin: 15px 20%;
     text-align: left;
 }
 
@@ -65,11 +65,36 @@ form {
 }
 
 
+main img {
+    width: 230px;
+    float: right;
+}
+
+h3 {
+    font-size: 45px
+}
+
+p {
+    font-size: 19px;
+    width: 750px
+}
+
+p2 {
+    font-size: 40px;
+    text-align: right;
+    width: 750px;
+    margin: 15px 1%
+}
+
+.btn-warning {
+    font-size: 19px;
+    margin: 15px 2%;
+}
 
 
-
-
-
+aside h3 {
+    color: #e3b719
+}
 
 
 

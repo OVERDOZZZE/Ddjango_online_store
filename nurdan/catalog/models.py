@@ -13,3 +13,6 @@ class Catalog(models.Model):
 
     # def get_absolute_url(self):
     #     return f'/catalog{self.id}'
+
+from django.db import models
+

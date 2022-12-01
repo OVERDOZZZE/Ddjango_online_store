@@ -1,15 +1,18 @@
 {% extends 'main/layout.html'%}
+{% load static %}
 
 {% block content %}
     <div class="features" >
     <h1>КАТАЛОГ</h1>
     {% if catalog %}
         {% for i in catalog %}
-            <div class="alert alert-warning">
+            <div class="alert alert-dark">
                 <h3>{{ i.title }}</h3>
                 <p>{{ i.description }}</p>
-                <p>{{ i.price }}$</p>
+                <p2>{{ i.price }}$</p2>
                 <a href="{% url 'catalog-detail' i.id %}" class="btn btn-warning">Подробнее</a>
+                <img src="{% static 'catalog/img/ak47.jpg' %}" alt="alternative" title="Текст при наведении курсора" />
+
             </div>
             {% endfor %}
         {% else %}
