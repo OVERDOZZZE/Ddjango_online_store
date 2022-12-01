@@ -3,7 +3,20 @@
 {% block content %}
     <div class="features" >
     <h1>Форма по добавлению</h1>
-        <form method="post" action=s"/catalog/check">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.description }}<br>
+            {{ form.price }}<br>
+            <span>
+                {{error}}
+            </span>
+            <button class="btn btn-success" type="submit">Добавить</button>
+<!--            <input type="text" placeholder="Название" class="form-control"><br>-->
+<!--            <input type="text" placeholder="Описание" class="form-control"><br>-->
+<!--            <textarea class="from-control" placeholder="Текст"></textarea>-->
+<!--            <input type="date" class="from-control"><br>-->
+<!--            <input type="time" class="from-control"><br>-->
         </form>
     </div>
 {% endblock %}
