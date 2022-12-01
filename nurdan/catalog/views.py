@@ -1,7 +1,22 @@
 from django.shortcuts import render, redirect
 from .models import Catalog
 from .forms import CatalogForm
+from django.views.generic import DetailView, UpdateView
 # Create your views here.
+
+
+class CatalogUpdateView(UpdateView):
+    model = Catalog
+    template_name = 'catalog/create.html'
+    # fields = ['title', 'description', 'price']
+
+    form_class = CatalogForm
+
+
+class CatalogDetailView(DetailView):
+    model = Catalog
+    template_name = 'catalog/details_view.html'
+    context_object_name = 'article'
 
 
 def catalog(request):
